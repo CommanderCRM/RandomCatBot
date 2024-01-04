@@ -64,6 +64,7 @@ def handle_start(message):
 
 
 def handle_subreddit(subreddits, message=None, chat_id=None, direct=False):
+  # we can either send a message or reply to a message
   if message:
     msg_chat_id = message.chat.id
     msg_user_id = message.from_user.id
@@ -74,6 +75,7 @@ def handle_subreddit(subreddits, message=None, chat_id=None, direct=False):
   if not isinstance(subreddits, list):
       subreddits = [subreddits]
 
+  # finding pics to download and send
   for subreddit_name in subreddits:
       subreddit = reddit.subreddit(subreddit_name)
       urls.extend([
@@ -84,6 +86,7 @@ def handle_subreddit(subreddits, message=None, chat_id=None, direct=False):
   if not urls:
       return
 
+  # random url is chosen, pic is stored temporarily and then deleted
   url = random.choice(urls)
   response = requests.get(url)
   tmp_file = os.path.join("/tmp", url.split("/")[-1])
@@ -146,23 +149,24 @@ def handle_messages(message):
     bot.reply_to(message, "Something is wrong")
 
 
-def daily_dose_of_pusha():
+def daily_dose_of_cats():
   subreddits = ["cats", "calicokittys", "catpics", "catloaf", "cattoeyes"]
   result = db.execute("SELECT chat_id FROM user_ids")
+  # sending messages to all users which interacted with the bot (present in DB)
   try:
     rows = result.fetchall()
     for row in rows:
       chat_id = row[0]
-      bot.send_message(chat_id, "Daily dose of Pusha")
+      bot.send_message(chat_id, "Daily dose of cats")
       handle_subreddit(subreddits, chat_id=chat_id, direct=True)
       sleep(5)
   except Exception as e:
     print("Error occurred while fetching chat IDs from the database:", e)
 
 
-# sending daily dose of pusha each day on 5:00 MSK
+# sending daily dose of cats each day on 5:00 MSK
 scheduler = BlockingScheduler(timezone="Europe/Moscow")
-scheduler.add_job(daily_dose_of_pusha, "cron", hour=5)
+scheduler.add_job(daily_dose_of_cats, "cron", hour=5)
 
 
 def schedule_checker():
