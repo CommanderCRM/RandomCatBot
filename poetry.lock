@@ -125,6 +125,14 @@ files = [
 frozenlist = ">=1.1.0"
 
 [[package]]
+name = "antiorm"
+version = "1.2.1"
+description = "A Pythonic Helper for DBAPI-2.0 SQL Access"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "apscheduler"
 version = "3.10.0"
 description = "In-process task scheduler with Cron-like capabilities"
@@ -1035,7 +1043,7 @@ python-versions = ">=3.7,<4.0"
 files = [
     {file = "pyseto-1.7.1-py3-none-any.whl", hash = "sha256:b06d0a37d8a49f6026c2feca2ee1aced9a1bac4e7f80ec6465c622847d34ab3a"},
     {file = "pyseto-1.7.1.tar.gz", hash = "sha256:a5b6d58edcf3990fda26731672385c64c2e7e0bc718f90038d0eb0528178169a"},
-]
+
 
 [package.dependencies]
 cryptography = ">=36,<40"
@@ -1092,7 +1100,7 @@ test = ["coverage", "pycodestyle", "pyflakes", "pylint", "pytest", "pytest-cov"]
 
 [[package]]
 name = "pytoolconfig"
-version = "1.2.5"
+version = "1.2.6"
 description = "Python tool configuration"
 category = "dev"
 optional = false
@@ -1201,7 +1209,7 @@ yapf = ["whatthepatch (>=1.0.2,<2.0.0)", "yapf"]
 
 [[package]]
 name = "requests"
-version = "2.28.2"
+version = "2.31.0"
 description = "Python HTTP for Humans."
 category = "main"
 optional = false
@@ -1215,7 +1223,7 @@ files = [
 certifi = ">=2017.4.17"
 charset-normalizer = ">=2,<4"
 idna = ">=2.5,<4"
-urllib3 = ">=1.21.1,<1.27"
+urllib3 = ">=1.21.1,<3"
 
 [package.extras]
 socks = ["PySocks (>=1.5.6,!=1.5.7)"]
@@ -1461,8 +1469,21 @@ files = [
 cython = "*"
 
 [[package]]
+name = "websocket-client"
+version = "1.7.0"
+description = "WebSocket client for Python with low level API options"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.extras]
+docs = ["Sphinx (>=6.0)", "sphinx-rtd-theme (>=1.1.0)"]
+optional = ["python-socks", "wsaccel"]
+test = ["websockets"]
+
+[[package]]
 name = "werkzeug"
-version = "2.2.2"
+version = "2.2.3"
 description = "The comprehensive WSGI web application library."
 category = "main"
 optional = false
@@ -1470,7 +1491,6 @@ python-versions = ">=3.7"
 files = [
     {file = "Werkzeug-2.2.2-py3-none-any.whl", hash = "sha256:f979ab81f58d7318e064e99c4506445d60135ac5cd2e177a2de0089bfd4c9bd5"},
     {file = "Werkzeug-2.2.2.tar.gz", hash = "sha256:7ea2d48322cc7c0f8b3a215ed73eabd7b5d75d0b50e31ab006286ccff9e00b8f"},
-]
 
 [package.dependencies]
 MarkupSafe = ">=2.1.1"
@@ -1594,3 +1614,4 @@ multidict = ">=4.0"
 lock-version = "2.0"
 python-versions = ">=3.10.0,<3.11"
 content-hash = "c8d1d1cbf5271095b68599a1a56d4d6dbdb7968e4b7bb757e9f8ebb6c2bc614f"
+
