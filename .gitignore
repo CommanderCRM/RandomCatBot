@@ -131,6 +131,5 @@ dmypy.json
 # Pusha
 pusha/
 
-# Vedis
-mem
-mem_vedis_journal
+# DB
+*.db
