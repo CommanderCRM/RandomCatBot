@@ -1323,13 +1323,13 @@ files = [
 
 [[package]]
 name = "replit"
-version = "3.6.3"
+version = "4.0.0"
 description = "A library for interacting with features of Replit"
 optional = false
 python-versions = "<4.0,>=3.9"
 files = [
-    {file = "replit-3.6.3-py3-none-any.whl", hash = "sha256:588cabe20eaff859fa57a340087ab5e62bc5123906cfbddb99972b33f14398c3"},
-    {file = "replit-3.6.3.tar.gz", hash = "sha256:2d50dd3252113ef3f6e47474c2ea40cf91f00b6bdd6a96d1366fb59840eda2fd"},
+    {file = "replit-4.0.0-py3-none-any.whl", hash = "sha256:53410e48d1681bcd72768f3a665ebb267b22a1d6752e33504bda75b3343ad9a3"},
+    {file = "replit-4.0.0.tar.gz", hash = "sha256:fffafcd0804c347c382bf332260ea9ba5bfa6393612ab316831f8167d876ff56"},
 ]
 
 [package.dependencies]
@@ -1839,4 +1839,4 @@ test = ["big-O", "importlib-resources", "jaraco.functools", "jaraco.itertools", 
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.10.0,<3.11"
-content-hash = "1986303be80112ee539a990a8019626e37a5c6a69fba6c88db9d5887c278981e"
+content-hash = "c117e1380a25b86266e48a954d45f8238d5d1dd1008ecd70be818c8a79e54e51"
