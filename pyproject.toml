@@ -19,7 +19,7 @@ db = "^0.1.1"
 pytelegrambotapi = "^4.24.0"
 
 [tool.poetry.dev-dependencies]
-debugpy = "^1.8.8"
+debugpy = "^1.8.9"
 replit-python-lsp-server = {extras = ["yapf", "rope", "pyflakes"], version = "^1.5.9"}
 
 [build-system]
