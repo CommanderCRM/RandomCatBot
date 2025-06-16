@@ -1496,14 +1496,14 @@ validation = ["pydantic (>=2.5.3)"]
 
 [[package]]
 name = "replit"
-version = "4.1.1"
+version = "4.1.2"
 description = "A library for interacting with features of Replit"
 optional = false
 python-versions = "<4.0,>=3.10"
 groups = ["main"]
 files = [
-    {file = "replit-4.1.1-py3-none-any.whl", hash = "sha256:2698f4e630b82ab56b53928cf15ed45fe4f2dabfee071e5eb079546e685debfe"},
-    {file = "replit-4.1.1.tar.gz", hash = "sha256:6b741f647884c2fd4b37e30d3d1ee50ff8f17ec89d8d1b0ac1eb8f1545a77270"},
+    {file = "replit-4.1.2-py3-none-any.whl", hash = "sha256:9e09c1a0ce569e323fe4bd6a3c09a3e938cf93516eadcdbf7a5a096497debdef"},
+    {file = "replit-4.1.2.tar.gz", hash = "sha256:8210cb826d29c655938bc44cf9db864b8ded5225035d499299ea1c69a14540a5"},
 ]
 
 [package.dependencies]
@@ -2023,4 +2023,4 @@ test = ["big-O", "importlib-resources ; python_version < \"3.9\"", "jaraco.funct
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.10.0,<3.11"
-content-hash = "e2300be09c504746e9372a0bb5a051f105d11ee8eb59c3a7652d779892c732c7"
+content-hash = "eca52a4519f4839a26d9f71fd9f3289fa4f7e7e73e309f8366eb01f29ea1b847"
