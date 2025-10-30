@@ -31,6 +31,13 @@ db_creation()
 generic_str = "Generic🐱"
 belly_str = "Belly🐈"
 loaf_str = "Loaf🍞"
+eyes_str = "Eyes👀"
+curled_str = "Curled paws🐾"
+black_str = "Black🐈‍⬛"
+siamese_str = "Siamese😼"
+bengal_str = "Bengal🐆"
+mainecoon_str = "Maine Coon🐈"
+tucked_str = "Tucked in🦢"
 random_str = "Random category🔄"
 
 
@@ -53,10 +60,21 @@ def handle_start(message):
   generic = KeyboardButton(text=generic_str)
   belly = KeyboardButton(text=belly_str)
   loaf = KeyboardButton(text=loaf_str)
+  curled = KeyboardButton(text=curled_str)
+  black = KeyboardButton(text=black_str)
+  siamese = KeyboardButton(text=siamese_str)
+  bengal = KeyboardButton(text=bengal_str)
+  mainecoon = KeyboardButton(text=mainecoon_str)
+  eyes = KeyboardButton(text=eyes_str)
+  tucked = KeyboardButton(text=tucked_str)
   random = KeyboardButton(text=random_str)
 
   keyboard.row(generic, belly)
-  keyboard.row(loaf, random)
+  keyboard.row(loaf, curled)
+  keyboard.row(black, siamese)
+  keyboard.row(bengal, mainecoon)
+  keyboard.row(eyes, tucked)
+  keyboard.row(random)
 
   bot.send_message(message.chat.id,
                    "You can also choose with buttons",
@@ -119,9 +137,44 @@ def handle_belly(message):
   handle_subreddit("catbellies", message=message)
 
 
+@bot.message_handler(commands=["eyes"])
+def handle_eyes(message):
+  handle_subreddit("cattoeyes", message=message)
+
+
+@bot.message_handler(commands=["curled"])
+def handle_curled(message):
+  handle_subreddit("curledfeetsies", message=message)
+
+
+@bot.message_handler(commands=["black"])
+def handle_black(message):
+  handle_subreddit("blackcats", message=message)
+
+
+@bot.message_handler(commands=["siamese"])
+def handle_siamese(message):
+  handle_subreddit("Siamesecats", message=message)
+
+
+@bot.message_handler(commands=["bengal"])
+def handle_bengal(message):
+  handle_subreddit("bengalcats", message=message)
+
+
+@bot.message_handler(commands=["mainecoon"])
+def handle_mainecoon(message):
+  handle_subreddit("mainecoons", message=message)
+
+
+@bot.message_handler(commands=["tucked"])
+def handle_tucked(message):
+  handle_subreddit("tuckedinkitties", message=message)
+
 @bot.message_handler(commands=["random"])
 def handle_random(message):
-    commands = [handle_generic, handle_belly, handle_loaf]
+    commands = [handle_generic, handle_belly, handle_loaf, handle_belly, handle_eyes, handle_curled,
+                handle_black, handle_siamese, handle_bengal, handle_mainecoon, handle_tucked]
     random_command = random.choice(commands)
     command_splitted = random_command.__name__.split('_')
     bot.reply_to(message, f"{command_splitted[1].capitalize()}!")
@@ -143,14 +196,29 @@ def handle_messages(message):
     handle_belly(message)
   elif loaf_str in message.text:
     handle_loaf(message)
+  elif eyes_str in message.text:
+    handle_eyes(message)
+  elif curled_str in message.text:
+    handle_curled(message)
+  elif black_str in message.text:
+    handle_black(message)
+  elif siamese_str in message.text:
+    handle_siamese(message)
+  elif bengal_str in message.text:
+    handle_bengal(message)
+  elif mainecoon_str in message.text:
+    handle_maincoon(message)
+  elif tucked_str in message.text:
+    handle_tucked(message)
   elif random_str in message.text:
     handle_random(message)
   else:
-    bot.reply_to(message, "Something is wrong")
+    bot.reply_to(message, "Something is wrong! Try using command from the bot menu")
 
 
 def daily_dose_of_cats():
-  subreddits = ["cats", "calicokittys", "catpics", "catloaf", "cattoeyes"]
+  subreddits = ["cats", "calicokittys", "catpics", "catloaf", "cattoeyes", "catswhosqueak", 
+                "curledfeetsies", "bengalcats", "blackcats", "mainecoons", "tuckedinkitties", "Siamesecats"]
   result = db.execute("SELECT chat_id FROM user_ids")
   # sending messages to all users which interacted with the bot (present in DB)
   try:
