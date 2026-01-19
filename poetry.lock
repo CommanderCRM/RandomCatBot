@@ -1473,14 +1473,14 @@ docs = ["Sphinx[docs] (>=7.1,<8)", "sphinx-autodoc-typehints[docs] (>=1.25.2)", 
 
 [[package]]
 name = "pytelegrambotapi"
-version = "4.29.1"
+version = "4.30.0"
 description = "Python Telegram bot API."
 optional = false
 python-versions = ">=3.9"
 groups = ["main"]
 files = [
-    {file = "pytelegrambotapi-4.29.1-py3-none-any.whl", hash = "sha256:961cd699c84864d29a3528eccd5319a558068a935a32b7c953c3b780b38f0d93"},
-    {file = "pytelegrambotapi-4.29.1.tar.gz", hash = "sha256:dd33d526e537eccb464175dd0326781a1c9fdb87db3ac141ec911e797f7e0797"},
+    {file = "pytelegrambotapi-4.30.0-py3-none-any.whl", hash = "sha256:cef0a61cfb21a320c597984985a7f417e35e67807f40cfc43bcb9ad3ebe944e6"},
+    {file = "pytelegrambotapi-4.30.0.tar.gz", hash = "sha256:0bbfe244e008c9e7fb9a5c1ddffb1d99b28089387f0706d4a8aad496feccda06"},
 ]
 
 [package.dependencies]
@@ -2066,4 +2066,4 @@ test = ["big-O", "importlib-resources ; python_version < \"3.9\"", "jaraco.funct
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.10.0,<3.11"
-content-hash = "6d75780cfa1d956a2527fe49bd6538fb0d9d3736eff64b9e331013cb04c57db2"
+content-hash = "27bfff29581a4cb1a2d1fe8742a0cbd6fc2fbbb7b82d77fbd5efa69e3f70e4ca"
