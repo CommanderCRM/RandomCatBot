@@ -1522,14 +1522,14 @@ pycryptodomex = ">=3.18.0"
 
 [[package]]
 name = "pytelegrambotapi"
-version = "4.30.0"
+version = "4.31.0"
 description = "Python Telegram bot API."
 optional = false
 python-versions = ">=3.9"
 groups = ["main"]
 files = [
-    {file = "pytelegrambotapi-4.30.0-py3-none-any.whl", hash = "sha256:cef0a61cfb21a320c597984985a7f417e35e67807f40cfc43bcb9ad3ebe944e6"},
-    {file = "pytelegrambotapi-4.30.0.tar.gz", hash = "sha256:0bbfe244e008c9e7fb9a5c1ddffb1d99b28089387f0706d4a8aad496feccda06"},
+    {file = "pytelegrambotapi-4.31.0-py3-none-any.whl", hash = "sha256:869d46b658a02c56f3aded6ab3a4b453e8f6f3927e36e32c91dbd97ae9d03f28"},
+    {file = "pytelegrambotapi-4.31.0.tar.gz", hash = "sha256:797cd0a9a99cc2d6672b082ea0cd5853e1c8b5ac9b76b257c160d6142049b66a"},
 ]
 
 [package.dependencies]
@@ -2115,4 +2115,4 @@ test = ["big-O", "importlib-resources ; python_version < \"3.9\"", "jaraco.funct
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.10.0,<3.11"
-content-hash = "2ba0ecdd02bd0bfedfc08f8134dfc68c6f38bfc8d9ddd803d55bdfc2da9872fd"
+content-hash = "e3fc245f5ec55a8df41eb926dc88e9b9828382d3750be43a8a24fee541ed8688"
