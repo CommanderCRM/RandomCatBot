@@ -761,6 +761,18 @@ files = [
 ]
 
 [[package]]
+name = "defusedxml"
+version = "0.7.1"
+description = "XML bomb protection for Python stdlib modules"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+groups = ["main"]
+files = [
+    {file = "defusedxml-0.7.1-py2.py3-none-any.whl", hash = "sha256:a352e7e428770286cc899e2542b6cdaedb2b4953ff269a210103ec58f6198a61"},
+    {file = "defusedxml-0.7.1.tar.gz", hash = "sha256:1bb3032db185915b62d7c6209c5a8792be6a32ab2fedacc84e01b52c51aa3e69"},
+]
+
+[[package]]
 name = "flask"
 version = "3.1.3"
 description = "A simple framework for building complex web applications."
@@ -1266,48 +1278,37 @@ testing = ["pytest", "pytest-benchmark"]
 
 [[package]]
 name = "praw"
-version = "7.8.2"
+version = "8.0.1"
 description = "Python Reddit API Wrapper."
 optional = false
-python-versions = "~=3.8"
+python-versions = ">=3.10"
 groups = ["main"]
 files = [
-    {file = "praw-7.8.2-py3-none-any.whl", hash = "sha256:ab0e2da4e1c03c6cfb3fdb91c1ddf3a42ecd09d6f09222ad5393ac89e8b97af5"},
-    {file = "praw-7.8.2.tar.gz", hash = "sha256:6230a2329e5c927ebbb45ebeb17d60761ace5ed65336a78fcfeab49937b9615b"},
+    {file = "praw-8.0.1-py3-none-any.whl", hash = "sha256:18295994d07b17a565d4663a8778319243c56d7b49fae2504b448607551dfdff"},
+    {file = "praw-8.0.1.tar.gz", hash = "sha256:4083ae0a60d9784e1af4911fa4d87be3518c957636a4001de232fd82c9ac6353"},
 ]
 
 [package.dependencies]
-prawcore = ">=2.4,<3"
-update_checker = ">=0.18"
-websocket-client = ">=0.54.0"
-
-[package.extras]
-ci = ["coveralls"]
-dev = ["packaging", "praw[lint]", "praw[test]"]
-lint = ["praw[readthedocs]", "pre-commit", "ruff (>=0.0.291)"]
-readthedocs = ["furo", "sphinx"]
-test = ["betamax (>=0.8,<0.9)", "betamax-matchers (>=0.3.0,<0.5)", "pytest (>=2.7.3)", "requests (>=2.20.1,<3)", "urllib3 (==1.26.*)"]
+defusedxml = "0.7.1"
+prawcore = ">=4,<5"
+typing-extensions = {version = "*", markers = "python_version <= \"3.10\""}
+update-checker = ">=1.0,<2.0"
+websocket-client = ">=0.54.0,<2"
 
 [[package]]
 name = "prawcore"
-version = "2.4.0"
-description = "\"Low-level communication layer for PRAW 4+."
+version = "4.0.0"
+description = "Low-level communication layer for PRAW 4+."
 optional = false
-python-versions = "~=3.8"
+python-versions = ">=3.10"
 groups = ["main"]
 files = [
-    {file = "prawcore-2.4.0-py3-none-any.whl", hash = "sha256:29af5da58d85704b439ad3c820873ad541f4535e00bb98c66f0fbcc8c603065a"},
-    {file = "prawcore-2.4.0.tar.gz", hash = "sha256:b7b2b5a1d04406e086ab4e79988dc794df16059862f329f4c6a43ed09986c335"},
+    {file = "prawcore-4.0.0-py3-none-any.whl", hash = "sha256:53f91bcd4cb25a26ca58f3ba7c5bf83d9d93a74025aae2c926bc6b0d5fd11df7"},
+    {file = "prawcore-4.0.0.tar.gz", hash = "sha256:c7e4d6e1b71e2b9c88680aee467e3e07d22df4c91bb01488ce2a3ab43d76b076"},
 ]
 
 [package.dependencies]
-requests = ">=2.6.0,<3.0"
-
-[package.extras]
-ci = ["coveralls"]
-dev = ["packaging", "prawcore[lint]", "prawcore[test]"]
-lint = ["pre-commit", "ruff (>=0.0.291)"]
-test = ["betamax (>=0.8,<0.9)", "pytest (>=2.7.3)", "urllib3 (==1.26.*)"]
+requests = ">=2.34.2,<3.0"
 
 [[package]]
 name = "propcache"
@@ -1886,23 +1887,18 @@ files = [
 
 [[package]]
 name = "update-checker"
-version = "0.18.0"
+version = "1.0.0"
 description = "A python module that will check for package updates."
 optional = false
-python-versions = "*"
+python-versions = ">=3.10"
 groups = ["main"]
 files = [
-    {file = "update_checker-0.18.0-py3-none-any.whl", hash = "sha256:cbba64760a36fe2640d80d85306e8fe82b6816659190993b7bdabadee4d4bbfd"},
-    {file = "update_checker-0.18.0.tar.gz", hash = "sha256:6a2d45bb4ac585884a6b03f9eade9161cedd9e8111545141e9aa9058932acb13"},
+    {file = "update_checker-1.0.0-py3-none-any.whl", hash = "sha256:5837640948ff21820ba3ea881fb4bed5abefb39037895c6447f5e712236d60c6"},
+    {file = "update_checker-1.0.0.tar.gz", hash = "sha256:bfcac66414572a82a98ea8c8633bf1ce5d102750e3b93469b89b30aa845cd1d7"},
 ]
 
-[package.dependencies]
-requests = ">=2.3.0"
-
 [package.extras]
-dev = ["black", "flake8", "pytest (>=2.7.3)"]
-lint = ["black", "flake8"]
-test = ["pytest (>=2.7.3)"]
+async = ["aiohttp"]
 
 [[package]]
 name = "urllib3"
@@ -2116,4 +2112,4 @@ test = ["big-O", "importlib-resources ; python_version < \"3.9\"", "jaraco.funct
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.10.0,<3.11"
-content-hash = "67f9a0dda175a372d9f53f9939ebbaefd69ae0bc9d8f57d74e81c1df6b72cae1"
+content-hash = "066842b9d916ac098be751d2a2193a71016758bf104cf76101858cb51e07fcaa"
