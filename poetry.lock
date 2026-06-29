@@ -1271,14 +1271,14 @@ testing = ["pytest", "pytest-benchmark"]
 
 [[package]]
 name = "praw"
-version = "8.0.1"
+version = "8.0.2"
 description = "Python Reddit API Wrapper."
 optional = false
 python-versions = ">=3.10"
 groups = ["main"]
 files = [
-    {file = "praw-8.0.1-py3-none-any.whl", hash = "sha256:18295994d07b17a565d4663a8778319243c56d7b49fae2504b448607551dfdff"},
-    {file = "praw-8.0.1.tar.gz", hash = "sha256:4083ae0a60d9784e1af4911fa4d87be3518c957636a4001de232fd82c9ac6353"},
+    {file = "praw-8.0.2-py3-none-any.whl", hash = "sha256:22a988bef07e2d840ab062ae25f760c5bfc6367b9ecaab69f71e7ff511d75564"},
+    {file = "praw-8.0.2.tar.gz", hash = "sha256:29bfe995f7f24017dd8eee36153085ad27de1740f13c7dcdb08df42a24a0dae2"},
 ]
 
 [package.dependencies]
@@ -2123,4 +2123,4 @@ test = ["big-O", "importlib-resources ; python_version < \"3.9\"", "jaraco.funct
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.10.0,<3.11"
-content-hash = "cf3fd660597e2cfcbbab9d18f2a4b7edca7a5916770bd9cd5128f5754e0daf6b"
+content-hash = "b636a64fb5befedc956cb7067bb0250f9f4375042caf82ad2071533c864c25fe"
