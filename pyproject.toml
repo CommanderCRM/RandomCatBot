@@ -16,7 +16,7 @@ vedis = "^0.7.1"
 praw = "8.0.2"
 requests = "2.34.2"
 db = "^0.1.1"
-pytelegrambotapi = "^4.34.0"
+pytelegrambotapi = "^4.35.0"
 
 [tool.poetry.dev-dependencies]
 debugpy = "^1.8.21"
